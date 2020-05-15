@@ -22,7 +22,7 @@ describe "the song form", :type => :feature do
     visit '/songs/new'
     fill_in :song_artist_name, with: 'Tori Amos'
     fill_in :song_title, with: 'Little Earthquakes'
-    select 'Alternative', from: :song_genre_id
+    select 'Alternative', from: :song_genre_name
     find('input[name="commit"]').click
     expect(Song.last.genre.name).to eq 'Alternative'
     expect(Genre.find_by(name: 'Alternative').songs.pluck(:title)).to include 'Little Earthquakes'

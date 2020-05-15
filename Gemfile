@@ -36,6 +36,7 @@ group :development do
 # Access an IRB console on exception pages or by using <%= console %> in views
 end
 
+gem 'pry'
 
 
 group :development, :test do
