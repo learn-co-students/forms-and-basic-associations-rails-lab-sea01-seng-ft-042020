@@ -1,3 +1,10 @@
 class Note < ActiveRecord::Base
-  # add associations here
+  belongs_to :song
+    # def notes_attributes=(text)
+    #   text.each do |text|
+    #     song = 
+    #     self.
+    #   end
+    # end
+
 end
