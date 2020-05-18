@@ -10,7 +10,7 @@
   <%= f.collection_select :genre_id, Genre.all, :id, :name%>
   <br>
 
-  <%= f.fields_for :notes, @song.notes.build([{created_at: "cool"},{created_at: "cool"},{created_at: "cool"}]) do |note| %>
+  <%= f.fields_for :notes, @song.notes.build([{},{},{}]) do |note| %>
     <%= note.text_field :content %>
   <% end %>
 
